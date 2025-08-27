@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardápio e Pedidos - Marmitas do Thiago</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js"></script>
+</head>
+<body>
+    <main class="menu-container">
+        <header class="menu-header">
+            <h1>Bem-Vindo à loja de Marmitas do Thiago Christo</h1>
+            <h2>Confira nosso cardápio e faça seu pedido abaixo</h2>
+        </header>
+
+        <table class="menu-table">
+            <thead>
+                <tr>
+                    <th>Tamanho</th>
+                    <th>Bife Acebolado (BA)</th>
+                    <th>Filé de Frango (FF)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>P</td>
+                    <td>R$ 16.00</td>
+                    <td>R$ 15.00</td>
+                </tr>
+                <tr>
+                    <td>M</td>
+                    <td>R$ 18.00</td>
+                    <td>R$ 17.00</td>
+                </tr>
+                <tr>
+                    <td>G</td>
+                    <td>R$ 22.00</td>
+                    <td>R$ 21.00</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="order-form">
+            <fieldset>
+                <legend>Faça seu pedido</legend>
+
+                <div class="form-group">
+                    <label id="sabor-label">1. Escolha o sabor:</label>
+                    <div class="options" role="radiogroup" aria-labelledby="sabor-label">
+                        <label>
+                            <input type="radio" name="sabor" value="BA" checked>
+                            Bife Acebolado
+                        </label>
+                        <label>
+                            <input type="radio" name="sabor" value="FF">
+                            Filé de Frango
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label id="tamanho-label">2. Escolha o tamanho:</label>
+                    <div class="options" role="radiogroup" aria-labelledby="tamanho-label">
+                        <label>
+                            <input type="radio" name="tamanho" value="P" checked>
+                            Pequeno
+                        </label>
+                        <label>
+                            <input type="radio" name="tamanho" value="M">
+                            Médio
+                        </label>
+                        <label>
+                            <input type="radio" name="tamanho" value="G">
+                            Grande
+                        </label>
+                    </div>
+                </div>
+
+                <div class="button-group">
+                    <button type="button" id="add-item-btn" class="btn btn-primary">
+                        Adicionar ao Pedido
+                    </button>
+                    <button type="button" id="clear-cart-btn" class="btn btn-secundary">
+                        Limpar Pedido
+                    </button>
+                </div>
+            </fieldset>
+        </div>
+
+        <div class="total-section">
+            <h3>Valor Total do Pedido</h3>
+            <p id="total-price" aria-live="polite">R$ 0.00</p>
+        </div>
+    </main>
+</body>
+</html>

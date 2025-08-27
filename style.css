@@ -1,0 +1,264 @@
+/* === VARIÁVEIS GLOBAIS E CONFIGURAÇÕES INICIAIS === */
+
+/* Definir variáveis CSS globais para mante a consistência do design */
+:root {
+    /* Paleta de cores */
+    --cor-primaria:        #2F4858 ;
+    --cor-secundaria:      #C2A878 ;
+    --cor-terciaria:       #A79C93 ;
+    --cor-fundo:           #FCF8F3 ;
+    --cor-cartao:          #FFFFFF ;
+    --cor-texto-principal: #3E3232 ;
+    --cor-texto-secudario: #786C62 ;
+    /* Tipografia */    
+    --fonte-principal: 'Segoe UI', sans-serif; /* Padroniza a fonte utilizada */
+}
+
+/* Reseta estilos universais para remover margins e paddings padrão do navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Garante que padding e border não afetem a largura/altura final do elemento */ 
+}
+
+/* Configurações para o elemento HTML */
+html {
+    scroll-padding-top: 90px; /* Evita que cabeçalho fixo cubra o topo das seções ao navegador pelos links */
+    scroll-behavior: smooth;  /* Habilita a rolagem suave ao clicar os links da navegação */
+}
+
+/* Estilos gerais para o corpo do documento */
+body {
+    font-family: var(--fonte-principal);
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto-principal);
+    line-height: 1.6; /* Melhora a legibilidade do texto */
+}
+
+/* === Header E NAVEGAÇÃO === */
+header {
+    background-color: var(--cor-cartao);
+    position: fixed; /* Mantém o cabeçalho fixo no topo da página */
+    width: 100%;
+    top: 0;
+    z-index: 1000; /* Garante que o cabeçalho fique sobre outros elementos */
+    border-bottom: 1px solid #e0e0e0;
+    padding: 0 40px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+/* Estilo para a lista de navegação (<ul>) */
+nav ul {
+    list-style: none; /* Remove os marcadores de lista */
+    display: flex;
+    justify-content: center; /* Centraliza os itens da navegação */
+    height: 80px;
+    align-items: center;
+}
+
+/* Estilo para os links da navegação (<a>) */
+nav ul li a {
+    display: block;
+    color: var(--cor-texto-principal);
+    text-decoration: none; /* Remove o sublinhado dos links */
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transição suave para o hover */
+}
+
+/* Efeito hover para os links da navegação */
+nav ul li a:hover {
+    color: var(--cor-cartao);
+    background-color: var(--cor-secundaria);
+}
+
+/* === CONTEÚDO PRINCIPAL E SEÇÕES === */
+
+main {
+    padding-top: 90px; /* Evita que o conteúdo da primeira seção comece sob o cabeçalho fixo */
+}
+
+/* Estilo padrão para todas as seções */
+section {
+    padding: 60px 40px;
+    margin: 0 auto 30px auto;
+    max-width: 960px; /* Limita a largura do conteúdo para melhor legibilidade */
+    background-color: var(--cor-cartao);
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+}
+
+/* Estilo para os títulos das seções (<h2>) */
+section h2 {
+    font-size: 2.5em;
+    font-weight: 700;
+    color: var(--cor-primaria);
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--cor-secundaria);
+    display: inline-block; /* Faz a borda inferior ter a largura do texto */
+}
+
+/* === ESTILOS ESPECÍFICOS: SEÇÃO FORMAÇÃO === */
+
+.formacao-container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px; /* Espaçamento entre os itens de formação */
+}
+
+.formacao-item {
+    padding: 25px;
+    border-left: 4px solid var(--cor-primaria); /* Destaque visual à esquerda */
+    background-color: var(--cor-fundo);
+}
+
+.formacao-item h3 {
+    margin: 0 0 5px 0;
+    color: var(--cor-primaria);
+}
+
+.formacao-item .instituicao {
+    margin: 0;
+    color: var(--cor-texto-secudario);
+}
+.formacao-item .periodo {
+    margin-top: 5px;
+    font-size: 0.9em;
+    color: var(--cor-texto-secudario);
+}
+
+/* === ESTILOS ESPECÍFICOS: SEÇÃO PORTIFÓLIO */
+
+.portifolio-grid {
+    display: grid;
+    /* Cria um grid responsivo que se ajusta automaticamente */
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.projeto-card {
+    background-color: var(--cor-fundo);
+    border-radius: 8px;
+    overflow: hidden; /* Garante que os cantos arredondados sejam aplicados à imagem */
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.projeto-card:hover {
+    transform: tanslateY(-5px); /* Efeito de elevação no hover. */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.projeto-imagem {
+    width: 100%;
+    height: 200px;
+    background-color: var(--cor-terciaria);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 0.9em;
+    text-align: center;
+}
+
+.projeto-imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante que a imagem cubra o espaçõ sem distorcer */
+}
+
+.projeto-imagem figcaption {
+    display: none;
+}
+
+.projeto-info {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Faz esta área crecer para ocupar o espaço disponível */
+}
+
+.projeto-info h3 {
+    color: var(--cor-primaria);
+}
+
+.projeto-info p {
+    flex-grow: 1;
+    margin-bottom: 20px;
+    color: var(--cor-texto-principal);
+}
+
+.projeto-link {
+    display: inline-block;
+    padding: 12px 20px;
+    text-decoration: none;
+    background-color: var(--cor-secundaria);
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: 600;
+    margin-top: auto; /* Alinha o botão na parte inferior do card */
+    transition: background-color 0.2s ease-in-out;
+}
+
+.projeto-link:hover {
+    background-color: var(--cor-primaria);
+}
+
+/* === ESTILOS ESPECÍFICOS: SEÇÃO CONTATO (FORMULÁRIO) === */
+
+form {
+    display: grid;
+    gap: 20px;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid var(--cor-terciaria);
+    border-radius: 5px;
+    font-size: 1em;
+    font-family: var(--fonte-principal);
+}
+
+/* Estilo de foco para campos de formulário para melhor usabilidade */
+form input:focus, form textarea:focus {
+    outline: none;
+    border-color: var(--cor-secundaria);
+    box-shadow: 0 0 5px rgba(194, 168, 120, 0.5);
+}
+
+form button {
+    padding: 15px 30px;
+    font-size: 1.1em;
+    font-weight: 600;
+    color: white;
+    background-color: var(--cor-primaria);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    justify-self: start; 
+}
+
+form button:hover {
+    background-color: var(--cor-secundaria);
+}
+
+#mensagem {
+    resize: none;
+    height: auto;
+}
+
+/* === RODAPÉ ===*/
+footer {
+    text-align: center;
+    padding: 30px;
+    background-color: #e9e9e9;
+    color: #000;
+    font-size: 0.9em;
+    margin-top: 40px;
+}

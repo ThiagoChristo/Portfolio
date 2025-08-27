@@ -1,0 +1,175 @@
+/* VARIÁVEIS GLOBAIS */
+:root {
+    --cor-primaria: #2f4858;
+    --cor-secundaria: #c2a878;
+    --cor-terciaria: #a79c93;
+    --cor-fundo: #fcf8f3;
+    --cor-cartao: #ffffff;
+    --cor-texto-principal: #3e3232;
+    --cor-texto-secundario: #786c62;
+    --cor-sucesso: #2ecc71;
+    --cor-sucesso-hover: #27ae60;
+    --cor-erro: #e74c3c;
+    --cor-erro-hover: #c0392b;
+    --fonte-principal: 'Segoe UI', sans-serif;
+}
+
+/* === ESTILOS GERAIS DO CORPO === */
+body {
+    font-family: var(--fonte-principal);
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto-principal);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Garanet que a centralização funcione mesmo com pouco conteúdo */
+    padding: 20px;
+}
+
+/* === CONTAINER PRINCIPAL === */
+.menu-container {
+    background-color: var(--cor-cartao);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+}
+
+/* === CABEÇALHO DO MENU === */
+.menu-header {
+    text-align: center;
+    border-bottom: 2px solid var(--cor-terciaria);
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.menu-header h1 {
+    font-size: 1.5rem;
+    color: var(--cor-texto-principal);
+    margin: 0;
+}
+
+.menu-header h2 {
+    font-size: 1.2rem;
+    color: var(--cor-texto-secundario);
+    margin: 10px 0 0;
+}
+
+/* === TABELA DE PREÇOS === */
+.menu-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+}
+
+.menu-table th, .menu-table td {
+    border: 1px solid var(--cor-terciaria);
+    padding: 12px;
+    text-align: center;
+}
+
+.menu-table th {
+    background-color: #3498db;
+    color: white;
+}
+
+.menu-table td {
+    font-size: 1.1rem;
+}
+
+/* === FORMULÁRIO DE PEDIDO === */
+.order-form fieldset {
+    border: 1px solid var(--cor-terciaria);
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.order-form legend {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--cor-primaria);
+    padding: 0 10px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.form-group .options {
+    display: flex;
+    flex-wrap: wrap; /* Permite que as opções quebrem a linha em telas menores */
+    gap: 20px;
+}
+
+.form-group .options label {
+    font-weight: normal;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+input[type="radio"] {
+    accent-color: var(--cor-primaria);
+}
+
+/* === BOTÕES === */
+.button-group {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.btn {
+    flex-grow: 1; /* Faz os botões ocuparem o espaço disponível */
+    padding: 15px;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease; 
+}
+
+.btn-primary {
+    background-color: var(--cor-sucesso);
+}
+.btn-primary:hover {
+    background-color: var(--cor-sucesso-hover);
+}
+
+.btn-secundary {
+    background-color: var(--cor-erro);
+}
+.btn-secundary:hover {
+    background-color: var(--cor-erro-hover);
+}
+
+/* === SELÇÃO DE TOTAL === */
+.total-section {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: var(--cor-fundo);
+    border: 2px dashed var(--cor-secundaria);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.total-section h3 {
+    color: var(--cor-texto-secundario);
+}
+
+#total-price {
+    color: #3498db;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 10px 0 0;
+}

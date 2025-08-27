@@ -1,0 +1,154 @@
+/* === VARIÁVEIS GLOBAIS DE CORES E FONTES */
+:root {
+    --cor-primaria: #2F4858;
+    --cor-secundaria: #C2A878;
+    --cor-acento: #A95C42;
+    --cor-fundo: #FCF8F3;
+    --cor-cartao: #FFFFFF;
+    --cor-texto-principal: #3E3232;
+    --cor-texto-secundaria: #786C62;
+    --cor-texto-terciaria: #A79C93;
+    --fonte-principal: 'Segoe UI', sans-serif;
+}
+
+/* === ESTILOS GERAIS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--fonte-principal);
+}
+
+/* ESTILO DO CORPO DA PÁGINA */
+body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto-principal);
+    display: flex;
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center;     /* Centraliza o conteúdo verticalmente */
+    min-height: 100vh;       /* Garante que o corpo ocupe a altura total da tela */
+}
+
+/* LAYOUT PRINCIPAL E CARD */
+.container {
+    padding: 20px;
+}
+
+.card {
+    background-color: var(--cor-cartao);
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+}
+
+/* === TEXTOS E TÍTULOS === */
+h1 {
+    color: var(--cor-primaria);
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: var(--cor-texto-secundaria);
+    margin-bottom: 30px;
+}
+
+/* GRUPOS DE INPUT (FORMULÁRIO) === */
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    color: var(--cor-texto-secundaria);
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto-principal);
+    font-size: 1rem;
+}
+
+.input-group input:focus {
+    outline: none; /* Remove a borda padrão do navegador */
+    border-color: var(--cor-secundaria);
+    box-shadow: 0 0 0 3px rgba(194, 168, 120, 0.3);
+}
+
+.input-group input::placeholder {
+    color: var(--cor-texto-terciaria);
+}
+
+/* GRUPO DE BOTÕES */
+.button-group {
+    display: flex;
+    gap: 15px; /* Espaço entre os botões */
+    margin-top: 30px;
+}
+
+.btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--cor-primaria);
+    color: var(--cor-cartao);
+}
+
+.btn-primary:hover {
+    background-color: #1e303a;
+}
+
+.btn-clear {
+    background-color: transparent;
+    color: var(--cor-primaria);
+    border: 2px solid var(--cor-primaria);
+}
+
+.btn-clear:hover {
+    background-color: #1e303a;
+    color: var(--cor-cartao);
+}
+
+/* === CONTÈINER DE RESULTADO === */
+#result-container {
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 8px;
+    border: 2px dashed var(--cor-secundaria);
+    transition: opacity 0.5s ease;
+}
+
+/* Classe para esconder o resultado antes do cálculo */
+#result-container.hidden {
+    display: none;
+    opacity: 0;
+}
+
+#imc-result {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--cor-primaria);
+    margin-bottom: 10px;
+}
+
+#imc-description {
+    font-size: 1.1rem;
+    color: var(--cor-texto-secundaria);
+}

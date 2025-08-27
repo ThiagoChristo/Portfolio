@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Portfólio - Thiago Santana de Christo</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#sobre-mim"  aria-label="Ir para a seção Sobre mim">Sobre mim</a></li>
+                <li><a href="#formacao"   aria-label="Ir para a seção Formação">Formação</a></li>
+                <li><a href="#portifolio" aria-label="Ir para a seção Portfólio">Portifólio</a></li>
+                <li><a href="#contato"    aria-label="Ir para a seção Contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="sobre-mim">
+            <h2>SOBRE MIM</h2>
+            <p>
+                Olá! Sou Thiago Santana de Christo, um entusiasta de tecnologia atualmente cursando Engenharia de Software na Uninter. Com uma base sólida em Engenharia Elétrica e formação técnica em Redes de Computadores, estou agora focado em aprimorar minhas habilidades em desenvolvimento para criar soluções de software eficientes e inovadoras. Meu objetivo é aplicar meu raciocínio lógico e minha capacidade de resolver problemas para construir aplicações que façam a diferença.
+            </p>
+        </section>
+        <section id="formacao">
+            <h2>FORMAÇÃO</h2>
+            <div class="formacao-container">
+                <div class="formacao-item">
+                    <h3>Engenharia de Softwre</h3>
+                    <p class="instituicao">Uninter</p>
+                    <p class="periodo">2025 - 2029 (Cursando)</p>
+                </div>
+                <div class="formacao-item">
+                    <h3>Engenharia Elétrica</h3>
+                    <p class="instituicao">Faculdade Doctum de Vitória</p>
+                    <p class="periodo">2018 - 2022 (Concluido)</p>
+                </div>
+                <div class="formacao-item">
+                    <h3>Redes de Computadores (Técnico)</h3>
+                    <p class="instituicao">EEEM Professor Fernando Duarte Rabelo</p>
+                    <p class="periodo">2015 - 2017 (Concluido)</p>
+                </div>
+            </div>
+        </section>
+        <section id="portifolio">
+            <h2>PORTIFÓLIO</h2>
+            <div class="portifolio-grid">
+                <div class="projeto-card">
+                    <div class="projeto-imagem">
+                        <img src="./imagens/proj2.png" alt="Captura de tela da página inicial do projeto Pizzaria">
+                    </div>
+                    <div class="projeto-info">
+                        <h3>
+                            Pizzaria
+                        </h3>
+                        <p>texto sobre o projeto.</p>
+                        <a href="./projpizzaria/index.html" class="projeto-link" aria-label="Ver detalhes do projeto Pizzaria">
+                            Ver Projeto
+                        </a>
+                    </div>
+                </div>
+                <div class="projeto-card">
+                    <figure class="projeto-imagem">
+                        <img src="./imagens/proj1.png" alt="Interface da Calculadora de IMC mostrando campos para peso e altura">
+                        <figcaption>Projeto de uma calculadora de Índice de Massa Corporal (IMC).</figcaption>
+                    </figure>
+                    <div class="projeto-info">
+                        <h3>Calculadora IMC</h3>
+                        <p>texto sobre o projeto.</p>
+                        <a href="./projimc/index.html" class="projeto-link" aria-label="Ver detalhes do projeto Calculadora IMC">
+                            Ver Projeto
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contato">
+            <h2>Contato</h2>
+            <form>
+                <label for="nome">Nome: </label>
+                <input type="text" id="nome" name="nome" required>
+
+                <label for="email">Email: </label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="mensagem">Mensagem: </label>
+                <textarea id="mensagem" name="mensagem" required></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 - Thiago Santana de Christo. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
