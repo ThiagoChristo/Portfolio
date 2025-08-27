@@ -130,7 +130,7 @@ section h2 {
 
 /* === ESTILOS ESPECÍFICOS: SEÇÃO PORTIFÓLIO */
 
-.portifolio-grid {
+.portfolio-grid {
     display: grid;
     /* Cria um grid responsivo que se ajusta automaticamente */
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
