@@ -290,7 +290,7 @@ footer {
 #voltar-ao-topo-btn.hidden {
     opacity: 1;
     visibility: visible;
-    transform: translateY();
+    transform: translateY(0);
 }
 
 #voltar-ao-topo-btn:hover {
